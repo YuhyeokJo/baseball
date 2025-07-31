@@ -17,7 +17,7 @@ class Game:
         self._assert_illegal_value(guess_number)
         if guess_number == self._question:
             return GameResult(True, 3, 0)
-        if self.is_2s_1b(guess_number):
+        if self.is_2s_0b(guess_number):
             return GameResult(False, 2, 0)
         return GameResult(False, 0, 0)
 
