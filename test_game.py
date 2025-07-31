@@ -40,4 +40,6 @@ def test_return_solved_result_if_2_strike_0_ball(game):
     assert_method_number(game.guess("123"), solved=False, strikes=2, balls=0)
 
 
-
+def test_return_solved_result_if_1_strike_2_ball(game):
+    game.question = "123"
+    assert_method_number(game.guess("132"), solved=False, strikes=1, balls=2)

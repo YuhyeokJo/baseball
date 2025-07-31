@@ -19,6 +19,18 @@ class Game:
             return GameResult(True, 3, 0)
         if self.is_2s_0b(guess_number):
             return GameResult(False, 2, 0)
+
+        if (guess_number[0] == self._question[0] and \
+                guess_number[1] == self._question[2] and \
+                guess_number[2] == self._question[1]) or \
+            (guess_number[0] == self._question[1] and \
+             guess_number[1] == self._question[0] and \
+             guess_number[2] == self._question[2]) or \
+            (guess_number[0] == self._question[2] and \
+             guess_number[1] == self._question[1] and \
+             guess_number[2] == self._question[0]):
+            return GameResult(False, 1, 2)
+
         return GameResult(False, 0, 0)
 
     def is_2s_0b(self, guess_number):
