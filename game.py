@@ -21,7 +21,7 @@ class Game:
             return GameResult(False, 2, 0)
         return GameResult(False, 0, 0)
 
-    def is_2s_1b(self, guess_number):
+    def is_2s_0b(self, guess_number):
         return (guess_number[0] == self._question[0] and \
                 guess_number[1] == self._question[1] and \
                 guess_number[2] != self._question[2]) or \
